@@ -1,203 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="fill_parent"
-        android:layout_height="240dp"
-        />
-
-    <GridLayout
-        android:id="@+id/mainGrid"
-        android:rowCount="1"
-        android:columnCount="2"
-        android:alignmentMode="alignMargins"
-        android:columnOrderPreserved="false"
-        android:layout_weight="8"
-        android:layout_width="fill_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:paddingBottom="0dp">
+        android:orientation="vertical">
 
-        <!-- ROW 1  -->
-        <!-- COLUMN 1  -->
-        <android.support.v7.widget.CardView
-            android:id="@+id/card1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="10dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
+        <TextView
+            android:id="@+id/student_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="12dp"
+            android:text="Atlanta, GA"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="68dp" />
 
-            <LinearLayout
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="0dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/modOne"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Promotions"
-                    android:layout_gravity="start"
-                    android:textColor="#000"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="2dp"/>
-
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <!-- COLUMN 2  -->
-        <android.support.v7.widget.CardView
-            android:id="@+id/card2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_marginBottom="10dp"
-            android:layout_rowWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="8dp">
-
-            <LinearLayout
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="0dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/modTwo"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Your Order"
-                    android:layout_gravity="start"
-                    android:textColor="#000"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="2dp"/>
-
-                <TextView
-                    android:id="@+id/actionInfo1"
-                    android:text="Restaurant: "
-                    android:textColor="@color/colorAccent"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="fill_parent"
-                    android:layout_gravity="start"/>
-
-                <TextView
-                    android:id="@+id/actionInfo2"
-                    android:text="ETA: --"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="fill_parent"
-                    android:layout_gravity="start"/>
-
-                <ImageView
-                    android:id="@+id/card_image2"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:layout_gravity="center_horizontal"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"/>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-    </GridLayout>
-
-    <GridLayout
-        android:id="@+id/mainGrid2"
-        android:layout_width="fill_parent"
-        android:layout_height="80dp"
-        android:layout_weight="8"
-        android:alignmentMode="alignMargins"
-        android:columnCount="1"
-        android:columnOrderPreserved="false"
-        android:paddingTop="0dp"
-        android:paddingBottom="8dp"
-        android:rowCount="1">
-
-        <!-- ROW 2  -->
-        <!-- COLUMN 1  -->
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card3"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
+            <ProgressBar
+                android:id="@+id/progressBarNews"
+                style="?android:attr/progressBarStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical">
+                android:layout_gravity="center"
+                tools:layout_editor_absoluteX="170dp"
+                tools:layout_editor_absoluteY="373dp" />
+        </RelativeLayout>
+    </LinearLayout>
 
-                <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Inspiration"
-                    android:textColor="#000"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:scaleType="fitXY"
-                    android:layout_gravity="center_horizontal"/>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-    </GridLayout>
-
-    <FrameLayout
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvNews"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:id="@+id/fragmentContainer"
-        />
-
-    <android.support.design.widget.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/nav_view"
-        android:layout_weight="1"
-        android:layout_gravity="bottom"
-        android:paddingTop="20dp"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_nav_menu"
-        />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:paddingTop="50dp"
+        android:scrollbars="vertical" />
+</RelativeLayout>
